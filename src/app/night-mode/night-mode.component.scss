@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 60vmin;
+  height: 40vmin;
+  border: 10px solid #457b9d;
+  border-radius: 5px;
+  background: radial-gradient(
+    circle at bottom,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  overflow: hidden;
+}
+
+.night {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+    circle at bottom,
+    rgba(0, 120, 140, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.sun {
+  position: absolute;
+  background: #ffd940;
+  box-shadow: inset -15px 0px #ffd21f;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+}
+
+.moon {
+  position: absolute;
+  background: #fffcf2;
+  box-shadow: inset 15px 0px #faf5e6;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+}
+
+.day-night-switch {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}

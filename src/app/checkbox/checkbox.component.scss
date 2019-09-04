@@ -1,0 +1,53 @@
+@import "./../../functions";
+
+:host {
+  --aa-checkbox-size: 2rem;
+  --aa-checkbox-color: #e63946;
+  --aa-checkbox-red: 230;
+  --aa-checkbox-green: 57;
+  --aa-checkbox-blue: 70;
+  all: unset;
+  display: inline-block;
+  position: relative;
+  width: calc(2 * var(--aa-checkbox-size));
+  height: var(--aa-checkbox-size);
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+:host:before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: var(--aa-checkbox-color);
+  transform: translateX(0%) scale(1);
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition-property: transform, filter, opacity;
+  transition-duration: 0.1s, 0.1s, 0.1s;
+  transition-timing-function: ease-out, ease-out, ease-out;
+}
+
+:host:checked:before {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateX(100%) scale(1);
+}
+
+:host:not(:checked):focus {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6), 0px 0px 8px rgba(0, 0, 0, 0.4),
+    0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+:host:checked:focus {
+  box-shadow: 0px 0px 0px 2px rgbaCustomVariables("--aa-checkbox", 1),
+    0px 0px 4px rgbaCustomVariables("--aa-checkbox", 0.8),
+    0px 0px 8px rgbaCustomVariables("--aa-checkbox", 0.6),
+    0px 0px 12px rgbaCustomVariables("--aa-checkbox", 0.4),
+    0px 0px 16px rgbaCustomVariables("--aa-checkbox", 0.2);
+}

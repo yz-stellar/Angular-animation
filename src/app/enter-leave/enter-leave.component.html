@@ -1,0 +1,17 @@
+<form>
+  <label for="">
+    <input
+      type="checkbox"
+      class="aa-checkbox"
+      (change)="tapirVisible = !tapirVisible"
+    />
+    Hide Tapir 😢
+  </label>
+</form>
+<img
+  src="assets/tapir.svg"
+  class="tapir"
+  alt=""
+  *ngIf="tapirVisible"
+  [@tapir]
+/>

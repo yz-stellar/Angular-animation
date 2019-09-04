@@ -1,0 +1,8 @@
+@function rgbaCustomVariables($prefix, $alpha) {
+  @return rgba(
+    var(#{$prefix}-red),
+    var(#{$prefix}-green),
+    var(#{$prefix}-blue),
+    $alpha
+  );
+}

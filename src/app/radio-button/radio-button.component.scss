@@ -1,0 +1,44 @@
+@import "./../../functions";
+
+:host {
+  --aa-radio-button-size: 1rem;
+  --aa-radio-button-color: #e63946;
+  --aa-radio-button-red: 230;
+  --aa-radio-button-green: 57;
+  --aa-radio-button-blue: 70;
+
+  all: unset;
+  display: inline-block;
+  position: relative;
+  width: var(--aa-radio-button-size);
+  height: var(--aa-radio-button-size);
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+:host:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--aa-radio-button-color);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.1s, 0.1s;
+  transition-timing-function: ease-out, ease-out;
+}
+
+:host:checked:before {
+  opacity: 0.9;
+  transform: scale(0.7);
+}
+
+:host:focus {
+  box-shadow: 0px 0px 0px 2px rgbaCustomVariables("--aa-radio-button", 1),
+    0px 0px 4px rgbaCustomVariables("--aa-radio-button", 0.8),
+    0px 0px 8px rgbaCustomVariables("--aa-radio-button", 0.6),
+    0px 0px 12px rgbaCustomVariables("--aa-radio-button", 0.4),
+    0px 0px 16px rgbaCustomVariables("--aa-radio-button", 0.2);
+}

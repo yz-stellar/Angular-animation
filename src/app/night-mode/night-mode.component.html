@@ -1,0 +1,11 @@
+<div class="night" [@night]="nightState"></div>
+<div class="sun" [@sun-and-moon]="sunState"></div>
+<div class="moon" [@sun-and-moon]="moonState"></div>
+<input
+  type="checkbox"
+  class="aa-checkbox day-night-switch"
+  value="day"
+  name="day-night-phase"
+  #toggle
+  (change)="toggleNightMode(toggle.checked)"
+/>

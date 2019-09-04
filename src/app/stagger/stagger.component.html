@@ -1,0 +1,9 @@
+<div class="controls">
+  <button class="aa-button" (click)="addBox()">ADD BOX</button>
+  <button class="aa-button" (click)="addBoxes()">ADD 5 BOXES</button>
+  <button class="aa-button" (click)="removeBox()">REMOVE BOX</button>
+  <button class="aa-button" (click)="removeAll()">REMOVE ALL</button>
+</div>
+<div class="boxes" [@boxes]="boxes.length">
+  <div *ngFor="let box of boxes" class="box"></div>
+</div>

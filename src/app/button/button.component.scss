@@ -1,0 +1,28 @@
+@import "./../../functions";
+
+:host {
+  --aa-button-padding: 0.5rem;
+  --aa-button-color: #e63946;
+  --aa-button-red: 230;
+  --aa-button-green: 57;
+  --aa-button-blue: 70;
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding: var(--aa-button-padding) calc(2 * var(--aa-button-padding));
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: rgbaCustomVariables("--aa-button", 0.8);
+  color: #fff;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+:host {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+:host:active {
+  box-shadow: unset;
+}
